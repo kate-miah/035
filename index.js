@@ -136,3 +136,44 @@ function getPlan() {
     let askUser = prompt('Який день тижня вас цикавить: Mon, Tue, Wed, Thu, Fri or Sat?');
     alert(weekPlan[askUser] || 'Nothing planned')
 }
+
+// this - ключове слово, яке вказую на об'ект, який є контекстом виконання методу
+
+let cat = {
+    name: 'Murzik',
+    age: 8,
+    color: 'red',
+    eat: function() {
+        console.log('НЯМ-НЯМ')
+    },
+    meow: function() {
+        // console.log(this);
+        // console.log('meow-meow')
+        console.log(`${this.name} каже Мяу`)
+    }
+ }
+
+ // task
+
+const flower = {
+    height: 20,
+    color: 'red',
+    grow: function() {
+        this.height += 10
+        return this
+    }
+ }
+
+ // task - ladder
+
+ const ladder = {
+    currentStep: 0,
+    up: function() {
+        this.currentStep++
+        return this
+    },
+    down: function() {
+        this.currentStep--
+        return this
+    }
+ }
