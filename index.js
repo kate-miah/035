@@ -73,3 +73,66 @@ const b = 10;
 const obj = {
     a: 'value'
 }
+
+const newUser = {
+    firstName: 'Joe',
+    lastName: 'Doe',
+    age: 18,
+    email: 'joe@u.idsa',
+    favoriteFilm: "It"
+}
+
+// console.log(user.firstName);
+// console.log(user.lastName);
+// console.log(user.age);
+// console.log(user.email);
+// console.log(favoriteFilm);
+
+/*
+let key = 'firstName';
+console.log(newUser[key]);
+key = 'lastName';
+console.log(newUser[key]);
+key = 'age';
+console.log(newUser[key]);
+key = 'email';
+console.log(newUser[key]);
+key = 'favoriteFilm';
+console.log(newUser[key]);
+*/
+for (const key in newUser) {
+   console.log(`${key}:`, newUser[key]);
+}
+
+
+let obj1 = {
+    a: 1,
+    b: 'hello',
+    v: true,
+    c: 10,
+    d: 28
+}
+ function sum(obj1) {
+    let sum = 0;
+    for (const key in obj1) {
+        if(typeof obj1[key] === 'number') {
+            sum += obj1[key];
+        }
+    }
+    return sum
+ }
+sum(obj1)
+
+
+function getPlan() {
+    const weekPlan = {
+    Mon: 'go to work',
+    Tue: 'friend party',
+    Wed: 'dantist',
+    Thu: 'homework',
+    Fri: 'walk to the park',
+    Sat: 'liein bed'
+}
+    let askUser = prompt('Який день тижня вас цикавить: Mon, Tue, Wed, Thu, Fri or Sat?');
+    alert(weekPlan[askUser] || 'Nothing planned')
+}
